@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - GroGlobally</title>
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="aboutstyle.css">
+    <style>
+
+
+/* Make content grow to push footer */
+main {
+    flex: 1;
+}
+
+        /* Make body fill full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+        /* Footer Styles */
+        .footer {
+            background: #FFF7E7;
+            border-top: 1px solid #959DA5;
+            padding: 70px 0 30px;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            max-width: 1290px;
+            margin: 0 auto;
+        }
+        
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 700;
+            color: #1a2a6c;
+        }
+        
+        .footer-logo span:first-child {
+            font-size: 24px;
+            line-height: 1;
+        }
+        
+        .footer-logo span:last-child {
+            font-size: 20px;
+            letter-spacing: 3px;
+            margin-top: -5px;
+        }
+        
+        .footer-menu {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-menu a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #000000;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .footer-menu a:hover {
+            color: #FFA500;
+        }
+        
+        .footer-middle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .copyright {
+            font-weight: 700;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            background: #FFA500;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            background: #1a2a6c;
+        }
+        
+        .divider {
+            height: 1px;
+            background: #959DA5;
+            margin: 30px 0;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            padding-top: 20px;
+        }
+        /* Decorative Elements */
+.ellipse {
+    position: absolute;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    z-index: -1; /* keep behind content */
+}
+
+.ellipse-130 {
+    width: 354px; height: 354px;
+    left: -98px; top: 144px;
+}
+.ellipse-139 {
+    width: 122px; height: 122px;
+    left: 138px; top: 110px;
+}
+.ellipse-140 {
+    width: 109px; height: 109px;
+    right: 50px; top: 650px;
+}
+.ellipse-136 {
+    width: 354px; height: 354px;
+    right: 50px; top: 1200px;
+}
+
+
+.orange-blur {
+    position: absolute;
+    background: #FFA500;
+    filter: blur(150px);
+    border-radius: 50%;
+    z-index: -2; /* behind ellipses */
+}
+
+.orange-131 { width: 260px; height: 260px; right: 80px; top: 350px; }
+.orange-132 { width: 260px; height: 260px; left: -72px; top: 1400px; filter: blur(175px); }
+.orange-133 { width: 224px; height: 224px; right: 80px; top: 2700px; }
+
+.about-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.about-point {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+.about-point .about-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    
+    color: #333;
+}
+
+.about-point .about-img {
+    flex: 1;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Alternating layout */
+.point-1 .about-img {
+    background-image: url("AboutUs_1.jpg");
+}
+.point-2 .about-img {
+    background-image: url("AboutUs_2.jpg");
+}
+.point-3 .about-img {
+    background-image: url("AboutUs_3.jpg");
+}
+
+/* Reverse order for point-2 */
+.point-2 {
+    flex-direction: row-reverse;
+        text-align: left;
+
+}
+
+/* Button style */
+.btn-outline {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+.btn-outline:hover {
+    background: #000;
+    color: #fff;
+}
+/* Default text style */
+.about-point .about-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    text-align: left; /* makes it left-aligned instead of centered */
+}
+
+/* Special case for point-2 */
+.point-2 .about-text {
+    text-align: left;
+    flex: 1.2;              /* make text take more space */
+}
+
+.point-2 .about-img {
+    flex: 0.8;              /* make image take less space */
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="navbar">
+        <div class="container">
+
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="aboutindex.html">About Us</a>
+                <a href="service.html">Services</a>
+                <a href="blogs.html">Articles</a>
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+            <div class="logo">
+                <img src="groglobally-logo.png" alt="GroGlobally Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+    </header>
+<main>
+    <section class="about-section">
+        <div class="container">
+            <h1 class="section-title">About Us</h1>
+            <div class="about-point point-1">
+                <div class="about-img img-"></div>
+                <div class="about-text">
+                    <h2>Build Up your Organization with our Solutions!</h2>
+                    <p>
+                        Our social media agency helps creators start from zero by thoroughly
+                        researching the target audience to identify key demographics, likes,
+                        behaviors and preferences. We develop content strategies that align
+                        with the creator's brand recognition, plan content types, themes,
+                        styles, and formats.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-point point-2">
+                <div class="about-text">
+                    <p>
+                        We determine the most appropriate social media platforms based on
+                        the creator's goals and optimize the content pages for maximum
+                        visibility and engagement.
+                    </p>
+                </div>
+                <div class="about-img img-2"></div>
+            </div>
+
+            <div class="about-point point-3">
+                <div class="about-img img-3"></div>
+                <div class="about-text">
+                    <p>
+                        Additionally, we help create high‑quality content, including images,
+                        videos, and text, and scheduling posts in a more accessible and
+                        engaging way fully incorporate, enabling strong and efficient data
+                        acquisition.
+                    </p>
+                    <a href="contactus.html" class="btn-outline">Get Started</a>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="client-stories">
+                <h2>Client Stories!</h2>
+                <div class="story-wrap">
+                    <div class="video-thumb">
+                        <button class="play-btn">▶</button>
+                    </div>
+                    <div class="story-text">
+                        <h3>Listen to our Success Story!</h3>
+                        <p>This is CA Pratik Sir, whom we helped to increase their online reach...</p>
+                        <a href="contactus.html" class="btn-outline">Let's Work Together!</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="previous-works">
+                <h2>Previous Works for our Clients!</h2>
+                <div class="works-carousel">
+                    <div class="work-item">
+                        <div class="work-img"></div>
+                        <div class="work-content">
+                            <h4>Pashira (@pashira_official)</h4>
+                            <p><strong>Worked on: Branding + Social Media</strong></p>
+                            <p>
+                                Before partnering with Gro Globally, Bakestrry Box... 300% increase
+                                in business growth; ROI tripled; more collaborations.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-img"></div>
+                        <div class="work-content">
+                            <h4>Perself (@perself7)</h4>
+                            <p><strong>Worked on: Branding + Social Media</strong></p>
+                            <p>
+                                Before partnering... Perself witnessed a transformative shift... 4×
+                                increase in engagement; steady follower growth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn-outline center-btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-top">
+                                   <img src="groglobally-logo.png" alt="Description"style="width: 120px; height: auto;"/>
+                   <div class="footer-menu">
+    <a href="index.html">Home</a>
+    <a href="aboutindex.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="blogs.html">Articles</a>
+    <a href="contactus.html">Contact Us</a>
+</div>
+                </div>
+                <div class="footer-middle">
+                    <div class="copyright">@GroGlobally All Rights Reserved</div>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="footer-bottom">
+                    <p>Designed and Developed by GroGlobally ❤</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <!-- Decorative Elements -->
+<div class="ellipse ellipse-130"></div>
+<div class="ellipse ellipse-139"></div>
+<div class="ellipse ellipse-140"></div>
+<div class="ellipse ellipse-136"></div>
+<div class="ellipse ellipse-137"></div>
+<div class="ellipse ellipse-138"></div>
+
+<div class="orange-blur orange-131"></div>
+<div class="orange-blur orange-132"></div>
+<div class="orange-blur orange-133"></div>
+<div class="orange-blur orange-134"></div>
+<div class="orange-blur orange-135"></div>
+</body>
+</html>

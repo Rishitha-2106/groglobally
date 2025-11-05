@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gro Globally - Blogs and Articles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #fff;
+    }
+ .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 80px;
+  gap: 150px;
+  width: 100%;
+  height: 70px;
+  background: #FFFACD; /* light yellow */
+  border: 1px solid #959DA5;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+    .navbar img {
+      width: 165px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 13px;
+      color: #000;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #959DA5;
+      border-radius: 30px;
+      padding: 8px 32px;
+      width: 350px;
+    }
+    .search-bar input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 13px;
+    }
+    .section-title {
+      font-size: 76px;
+      font-weight: 700;
+      text-align: center;
+      margin: 100px 0 60px;
+    }
+    .article-container {
+      max-width: 1064px;
+      margin: 0 auto 60px;
+      display: flex;
+      background: #fff;
+      border: 1px solid #959DA5;
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+      border-radius: 33px;
+      padding: 17px 18px;
+      gap: 11px;
+    }
+    .article-img {
+      width: 440px;
+      height: 320px;
+    }
+    .article-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    .article-content {
+      width: 561px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .article-content h2 {
+      font-size: 39px;
+      font-weight: 700;
+    }
+    .article-content p {
+      font-size: 20px;
+      line-height: 30px;
+      margin: 20px 0;
+    }
+    .read-more {
+      background: #FFA500;
+      color: #000;
+      font-size: 16px;
+      padding: 17px 49px;
+      border-radius: 33px;
+      border: 1px solid #000;
+      cursor: pointer;
+      width: fit-content;
+    }
+    .footer {
+      background: #FFF7E7;
+      border: 1px solid #959DA5;
+      padding: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 86px;
+    }
+    .footer-top, .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1290px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 30px;
+    }
+    .footer-links a {
+      font-size: 20px;
+      color: #000;
+      text-decoration: none;
+    }
+    .social-icons {
+      display: flex;
+      gap: 30px;
+    }
+    .social-icons img {
+      width: 48px;
+      height: 48px;
+    }
+    .social-icons a {
+  color: #FFA500; /* orange-yellow mix */
+  font-size: 28px; /* increase size */
+  margin: 0 12px; /* spacing between icons */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #FFB733; /* brighter orange-yellow on hover */
+  transform: scale(1.2); /* zoom effect on hover */
+}
+
+    .footer-line {
+      width: 1300px;
+      border-top: 1px solid #959DA5;
+    }
+    .footer-copy {
+      font-size: 20px;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+    <a href="aboutindex.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="blogs.html">Articles</a>
+    <a href="contactus.html">Contact Us</a>
+    </nav>
+        <img src="groglobally-logo.png" alt="Gro Globally Logo">
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search" />
+      <span>🔍</span>
+    </div>
+  </header>
+
+  <h1 class="section-title">Blogs and Articles</h1>
+
+  <section class="article-container">
+    <div class="article-img">
+      <img src="Digital_Marketing.jpg" alt="Digital Marketing">
+    </div>
+    <div class="article-content">
+      <h2>Digital Marketing</h2>
+      <p>Digital marketing is a marketing strategy that a company needs for the current era. A company needs a marketer with up-to-date knowledge...</p>
+      <button class="read-more" onclick="window.location.href='dm.html'">Read More</button>
+    </div>
+  </section>
+
+  <section class="article-container">
+    <div class="article-img">
+      <img src="Artificial_Intelligence.png" alt="Artificial Intelligence">
+    </div>
+    <div class="article-content">
+      <h2>Artificial Intelligence</h2>
+      <p>In recent years, artificial intelligence (AI) has made significant strides, particularly with the development of large language models...</p>
+      <button class="read-more" onclick="window.location.href='ai.html'">Read More</button>
+    </div>
+  </section>
+
+  <section class="article-container">
+    <div class="article-img">
+      <img src="Quantum_Computing.png" alt="Quantum Computing">
+    </div>
+    <div class="article-content">
+      <h2>Quantum Computing</h2>
+      <p>Imagine a world where computers can solve problems in seconds that would take today’s most advanced systems thousands of years. This isn’t science fiction—it’s the promise of quantum computing. When combined with artificial intelligence (AI), the possibilities become even...</p>
+      <button class="read-more" onclick="window.location.href='qc.html'">Read More</button>
+    </div>
+  </section>
+
+  <section class="article-container">
+    <div class="article-img">
+      <img src="Voice_Search_Analysis.png" alt="Voice Search">
+    </div>
+    <div class="article-content">
+      <h2>Voice Search Analysis</h2>
+      <p>Voice search analytics is revolutionizing how we interact with technology, offering deeper insights into user behavior and improving user experiences. With the rise of digital assistants like Siri, Alexa, and Google Assistant...</p>
+      <button class="read-more" onclick="window.location.href='vs.html'">Read More</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <img src="groglobally-logo.png" alt="Footer Logo" style="height:67px">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+    <a href="aboutindex.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="blogs.html">Articles</a>
+    <a href="contactus.html">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-top">
+      <div class="footer-copy">@GroGlobally &nbsp; All Rights Reserved</div>
+      <div class="social-icons">
+    
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          
+      </div>
+    </div>
+    <div class="footer-line"></div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Designed and Developed by GroGlobally ❤️</div>
+    </div>
+  </footer>
+</body>
+</html>
+

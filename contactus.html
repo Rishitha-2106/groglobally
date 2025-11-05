@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - GroGlobally</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background: #FFFFFF;
+            position: relative;
+            min-height: 2830px;
+            width: 1440px;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        header {
+            position: absolute;
+            width: 1440px;
+            height: 70px;
+            top: 0;
+            left: 0;
+            background: #FFF7E7;
+            border: 1px solid #959DA5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 80px;
+            z-index: 100;
+        }
+        
+        .logo {
+            width: 165px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 24px;
+            color: #000;
+        }
+        
+        .logo span:first-child {
+            color: #FFA500;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 16px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 23px;
+            color: #000000;
+            font-weight: 400;
+        }
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+            width: 350px;
+            height: 40px;
+            background: #FFFFFF;
+            border: 1px solid #959DA5;
+            border-radius: 30px;
+            padding: 8px 32px;
+        }
+        
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            font-size: 13px;
+            line-height: 23px;
+            color: #000000;
+        }
+        
+        .search-bar i {
+            color: #000;
+            font-size: 16px;
+        }
+        
+        /* Main Content Styles */
+        .contact-section {
+            position: absolute;
+            width: 100%;
+            top: 230px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .contact-title {
+            font-weight: 700;
+            font-size: 61px;
+            line-height: 74px;
+            color: #000000;
+            margin-bottom: 84px;
+        }
+        
+        .brand-growth {
+            font-weight: 700;
+            font-size: 39px;
+            line-height: 47px;
+            color: #000000;
+            margin-bottom: 84px;
+            width: 846px;
+        }
+        
+        .description {
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 33px;
+            color: #000000;
+            margin-bottom: 54px;
+            width: 1064px;
+        }
+        
+        .contact-options {
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 33px;
+            color: #000000;
+            margin-bottom: 121px;
+            width: 955px;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            position: absolute;
+            width: 768px;
+            height: 720px;
+            top: 761px;
+            left: calc(50% - 768px/2);
+            background: #FFFFFF;
+            box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.25);
+            border-radius: 16px;
+            padding: 37px 62px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            z-index: 10;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+        
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-group label {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+            text-align: left;
+        }
+        
+        .form-group input, .form-group textarea {
+            background: #FFFFFF;
+            border: 1px solid #959DA5;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 16px;
+        }
+        
+        .form-group input {
+            height: 54px;
+        }
+        
+        .form-group textarea {
+            height: 173px;
+            resize: none;
+        }
+        
+        .message-group {
+            width: 100%;
+        }
+        
+        .send-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 195px;
+            height: 60px;
+            background: #FFF7E7;
+            border: 1px solid #FFA500;
+            border-radius: 33px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .send-btn:hover {
+            background: #FFA500;
+            color: #fff;
+        }
+        
+        /* Contact Confirmation */
+        .confirmation {
+            position: absolute;
+            width: 846px;
+            height: 76px;
+            top: 1601px;
+            left: calc(50% - 846px/2);
+            font-weight: 600;
+            font-size: 31px;
+            line-height: 38px;
+            text-align: center;
+            color: #000000;
+        }
+        
+        /* Contact Details */
+        .contact-details {
+            position: absolute;
+            width: 826px;
+            height: 244px;
+            top: 1767px;
+            left: calc(50% - 826px/2);
+            display: flex;
+            gap: 80px;
+            z-index: 10;
+        }
+        
+        .contact-card {
+            width: 373px;
+            height: 244px;
+            background: #FFFFFF;
+            box-shadow: 3px 1px 43px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-icon i {
+            color: #FFA500;
+            font-size: 24px;
+        }
+        
+        .contact-type {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+            text-align: center;
+            color: #000000;
+        }
+        
+        .contact-info {
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 33px;
+            text-align: center;
+            color: #000000;
+        }
+        
+        /* Footer Styles */
+        footer {
+            position: absolute;
+            width: 1440px;
+            height: 590px;
+            bottom: 0;
+            background: #FFF7E7;
+            border: 1px solid #959DA5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 70px;
+            gap: 86px;
+        }
+        
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1291px;
+            height: 67px;
+        }
+        
+        .footer-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 31px;
+        }
+        
+        .footer-nav ul li a {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: #000000;
+        }
+        
+        .footer-middle {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 1290px;
+            height: 48px;
+        }
+        
+        .copyright {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFA500;
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+        }
+        
+        .divider {
+            width: 1300px;
+            height: 0px;
+            border: 1px solid #959DA5;
+        }
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1290px;
+            height: 50px;
+        }
+        
+        .designer {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: #000000;
+        }
+        
+        /* Decorative Elements */
+        .ellipse-124 {
+            position: absolute;
+            width: 209px;
+            height: 209px;
+            left: 1301px;
+            top: 171px;
+            background: #FFA500;
+            filter: blur(150px);
+            z-index: 1;
+        }
+        
+        .ellipse-125 {
+            position: absolute;
+            width: 277px;
+            height: 277px;
+            left: -75px;
+            top: 1115px;
+            background: #FFA500;
+            filter: blur(150px);
+            z-index: 1;
+        }
+        
+        .ellipse-128 {
+            position: absolute;
+            width: 277px;
+            height: 277px;
+            left: 1202px;
+            top: 2171px;
+            background: #FFA500;
+            filter: blur(150px);
+            z-index: 1;
+        }
+        
+        .ellipse-126 {
+            position: absolute;
+            width: 277px;
+            height: 277px;
+            left: 115px;
+            top: 313px;
+            border: 1px solid #D9D9D9;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .ellipse-127 {
+            position: absolute;
+            width: 526px;
+            height: 526px;
+            left: 1018px;
+            top: 1241px;
+            border: 1px solid #D9D9D9;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .ellipse-129 {
+            position: absolute;
+            width: 297px;
+            height: 297px;
+            left: -114px;
+            top: 1965px;
+            border: 1px solid #D9D9D9;
+            border-radius: 50%;
+            z-index: 1;
+        }
+.nav-menu a {
+  text-decoration: none; /* Removes underline */
+  color: black;           /* Sets text color to black */
+  font-weight: 500;       /* Optional: makes it a bit bold */
+  font-size: 16px;        /* Adjust size as per design */
+  margin: 0 12px;         /* Spacing between links */
+}
+
+.nav-menu a:hover {
+  color: #FFA500;         /* Optional: hover color (orange in your case) */
+}
+.footer-menu {
+  display: flex;
+  justify-content: right; /* or 'flex-start' or 'space-between' */
+  gap: 20px; /* Equal spacing between links */
+  flex-wrap: wrap; /* Wrap on smaller screens */
+  padding: 20px 0;
+}
+
+.footer-menu a {
+  text-decoration: none;   /* Remove underline */
+  color: black;            /* Or white, depending on background */
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+  color: #FFA500; /* Orange on hover */
+}
+.footer-menu a {
+  margin: 0;              /* No margin, we control spacing using gap */
+}
+
+.footer-menu {
+  gap: 1vw;               /* Optional: relative spacing */
+}
+.navbar, .footer-nav {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+           <div class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="aboutindex.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="blogs.html">Articles</a>
+    <a href="contactus.html">Contact Us</a>
+</div>
+        </nav>
+         <div class="logo">
+            <img src="groglobally-logo.png" alt="Description"style="width: 120px; height: auto;"
+ />
+
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <i class="fas fa-search"></i>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="contact-section">
+        <h1 class="contact-title">Contact Us</h1>
+        <h2 class="brand-growth">Want to Accelerate your Brand's Growth?</h2>
+        <p class="description">We would love to chat with you and discuss more about how we can best create the perfect digital marketing solution for your business!</p>
+        <p class="contact-options">You can either fill out the form below or find our contact details below the form!</p>
+    </div>
+    
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone">
+            </div>
+            <div class="form-group">
+                <label for="purpose">Purpose</label>
+                <input type="text" id="purpose">
+            </div>
+        </div>
+        <div class="form-group message-group">
+            <label for="message">Message</label>
+            <textarea id="message"></textarea>
+        </div>
+        <button class="send-btn">Send Message</button>
+    </div>
+    
+    <!-- Contact Confirmation -->
+    <div class="confirmation">
+        <p>We'll get back to you within the next 24 hours once we receive your message!</p>
+    </div>
+    
+    <!-- Contact Details -->
+    <div class="contact-details">
+        <div class="contact-card">
+            <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-type">Email</div>
+            <div class="contact-info">info@groglobally.com</div>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-type">Phone</div>
+            <div class="contact-info">+91-9906095860</div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="logo">
+                         <img src="groglobally-logo.png" alt="Description"style="width: 120px; height: auto;"/>
+
+            </div>
+            <nav class="footer-nav">
+                <div class="footer-menu">
+    <a href="index.html">Home</a>
+    <a href="aboutindex.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="blogs.html">Articles</a>
+    <a href="contactus.html">Contact Us</a>
+</div>
+            </nav>
+        </div>
+        
+        <div class="footer-middle">
+            <div class="copyright">@GroGlobally All Rights Reserved</div>
+            <div class="social-icons">
+                <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
+                <div class="social-icon"><i class="fab fa-instagram"></i></div>
+                <div class="social-icon"><i class="fab fa-youtube"></i></div>
+                <div class="social-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div class="social-icon"><i class="fab fa-twitter"></i></div>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="footer-bottom">
+            <div class="designer">Designed and Developed by GroGlobally ❤</div>
+        </div>
+    </footer>
+    
+    <!-- Decorative Elements -->
+    <div class="ellipse-124"></div>
+    <div class="ellipse-125"></div>
+    <div class="ellipse-128"></div>
+    <div class="ellipse-126"></div>
+    <div class="ellipse-127"></div>
+    <div class="ellipse-129"></div>
+</body>
+</html>

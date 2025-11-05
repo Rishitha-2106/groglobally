@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroGlobally - Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #FFFFFF;
+    overflow-x: hidden;
+    max-width: 1440px;   /* keeps layout consistent */
+    margin: 0 auto;      /* centers everything */
+}
+
+
+        /* Navbar */
+       .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+    width: 100%;
+    max-width: 1440px;
+    height: 70px;
+    background: #FFF7E7;
+    border-bottom: 1px solid #959DA5;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            gap: 16px;
+            width: 327px;
+            height: 54px;
+        }
+
+        .menu-item {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 23px;
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .menu-item:hover {
+            color: #FFA500;
+        }
+
+        .logo {
+            width: 165px;
+            height: 54px;
+            background: #FFA500;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 8px 32px;
+            width: 350px;
+            height: 40px;
+            background: #FFFFFF;
+            border: 1px solid #959DA5;
+            border-radius: 30px;
+        }
+
+        /* Main Content */
+        
+        .services-title {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 120px auto 20px auto; /* below navbar */
+    color: #000;
+}
+
+.services-subtitle {
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    margin: 0 auto 30px auto;
+    max-width: 900px;
+    color: #000;
+}
+.intro-text {
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 20px auto;
+    color: #333;
+}
+
+.intro-subtext {
+    text-align: center;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 10px auto 40px auto;
+    color: #000;
+}
+
+.orange-line {
+    width: 300px;
+    border: 3px solid #FFA500;
+    margin: 20px auto;
+}
+
+
+        /* Service Points */
+.service-point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+.service-point:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.service-image {
+    width: 300px;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+.service-text {
+    max-width: 600px;
+}
+
+.service-title {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.service-description {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #444;
+}
+
+
+        /* Position each service point */
+        .point1 {
+            width: 1173px;
+            height: 264px;
+            left: 187px;
+            top: 869px;
+        }
+
+        .point2 {
+            width: 1191.12px;
+            height: 289px;
+            left: 80px;
+            top: 1231px;
+            flex-direction: row-reverse;
+        }
+
+        .point3 {
+            width: 1172px;
+            height: 263px;
+            left: 188px;
+            top: 1640px;
+        }
+
+        .point4 {
+            width: 1192px;
+            height: 280px;
+            left: 80px;
+            top: 2023px;
+            flex-direction: row-reverse;
+        }
+
+        .point5 {
+            width: 1199px;
+            height: 263px;
+            left: 161px;
+            top: 2423px;
+        }
+
+        /* Page Breaker */
+        .page-breaker {
+            position: absolute;
+            width: 1300px;
+            height: 0px;
+            left: calc(50% - 1300px/2);
+            top: 2816px;
+            border: 1px solid #959DA5;
+        }
+
+        /* Packages Section */
+        .packages-title {
+            position: absolute;
+            width: 414px;
+            height: 29px;
+            left: calc(50% - 414px/2);
+            top: 2906px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+            text-align: center;
+            color: #000000;
+        }
+
+        .packages-subtitle {
+            position: absolute;
+            width: 630px;
+            height: 46px;
+            left: calc(50% - 630px/2);
+            top: 2992px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 39px;
+            line-height: 47px;
+            text-align: center;
+            color: #000000;
+        }
+
+       .packages-container {
+    display: flex;
+    justify-content: center; /* Center packages */
+    gap: 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+}
+
+.package {
+    flex: 0 0 auto;
+    width: 400px;   /* adjust width as needed */
+    margin: 0 auto; /* keep each package centered */
+}
+
+
+        .packages-container::-webkit-scrollbar {
+            display: none;
+        }
+        
+
+        .package {
+            width: 836px;
+            height: 587px;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .package-bg {
+            position: absolute;
+            width: 751px;
+            height: 500px;
+            background: #FFF7E7;
+            border-radius: 33px;
+        }
+
+        .package-highlight {
+            position: absolute;
+            width: 751px;
+            height: 470px;
+            background: #FFA500;
+            border-radius: 33px;
+        }
+
+        .package-name {
+            position: absolute;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 39px;
+            line-height: 47px;
+            color: #000000;
+        }
+
+        .package-features-left {
+            position: absolute;
+            width: 327px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: #000000;
+        }
+
+        .package-features-right {
+            position: absolute;
+            width: 285px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: #000000;
+        }
+
+        .package-description {
+            position: absolute;
+            width: 327px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: right;
+            color: #000000;
+        }
+
+        .feature-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .check-icon {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300A000'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+        }
+
+        .cross-icon {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F81919'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+        }
+
+        /* Position elements for each package */
+        .package1 .package-bg {
+            left: 141px;
+            top: 147px;
+        }
+
+        .package1 .package-highlight {
+            left: 141px;
+            top: 147px;
+        }
+
+        .package1 .package-name {
+            left: 186px;
+            top: 191px;
+        }
+
+        .package1 .package-features-left {
+            left: 186px;
+            top: 298px;
+        }
+
+        .package1 .package-features-right {
+            left: 562px;
+            top: 298px;
+        }
+
+        .package1 .package-description {
+            left: 520px;
+            top: 185px;
+        }
+
+        .package2 .package-bg {
+            left: 983px;
+            top: 147px;
+        }
+
+        .package2 .package-highlight {
+            left: 983px;
+            top: 147px;
+        }
+
+        .package2 .package-name {
+            left: 1028px;
+            top: 191px;
+        }
+
+        .package2 .package-features-left {
+            left: 1028px;
+            top: 298px;
+        }
+
+        .package2 .package-features-right {
+            left: 1362px;
+            top: 298px;
+        }
+
+        .package2 .package-description {
+            left: 1362px;
+            top: 185px;
+        }
+
+        .package3 .package-bg {
+            left: 1825px;
+            top: 147px;
+        }
+
+        .package3 .package-highlight {
+            left: 1825px;
+            top: 147px;
+        }
+
+        .package3 .package-name {
+            left: 1870px;
+            top: 191px;
+        }
+
+        .package3 .package-features-left {
+            left: 1870px;
+            top: 282px;
+        }
+
+        .package3 .package-features-right {
+            left: 2204px;
+            top: 282px;
+        }
+
+        .package3 .package-description {
+            left: 2204px;
+            top: 185px;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 14px 56px;
+            gap: 10px;
+            position: absolute;
+            width: 330px;
+            height: 65px;
+            left: calc(50% - 330px/2);
+            top: 3870px;
+            background: #FFFFFF;
+            border: 2px solid #000000;
+            border-radius: 33px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            color: #000000;
+            cursor: pointer;
+        }
+
+        /* Promise Section */
+        .promise-divider {
+            position: absolute;
+            width: 1300px;
+            height: 0px;
+            left: calc(50% - 1300px/2);
+            top: 4045px;
+            border: 1px solid #959DA5;
+        }
+
+        .promise-title {
+            position: absolute;
+            width: 414px;
+            height: 78px;
+            left: calc(50% - 414px/2);
+            top: 4135px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 39px;
+            line-height: 47px;
+            text-align: center;
+            color: #000000;
+        }
+
+        .promise-container {
+            position: absolute;
+            width: 1120px;
+            height: 317px;
+            left: calc(50% - 1120px/2);
+            top: 4271px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .promise-item {
+            width: 305px;
+            height: 308px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .promise-icon {
+            width: 211px;
+            height: 211px;
+            background: #D9D9D9;
+            border-radius: 50%;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .promise-item-title {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 31px;
+            line-height: 38px;
+            text-align: center;
+            color: #000000;
+        }
+        
+
+        /* Footer */
+        .footer {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 70px;
+            gap: 86px;
+            position: absolute;
+            width: 1440px;
+            height: 590px;
+            left: calc(50% - 1440px/2);
+            bottom: 0px;
+            background: #FFF7E7;
+            border: 1px solid #959DA5;
+        }
+
+        .footer-top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 1291px;
+            height: 67px;
+        }
+
+        .footer-logo {
+            width: 217px;
+            height: 67px;
+            background: #FFA500;
+        }
+
+        .footer-menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 31px;
+        }
+
+        .footer-menu-item {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .footer-middle {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 1290px;
+            height: 48px;
+        }
+
+        .footer-copyright {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+        }
+
+        .footer-social {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            background: #D9D9D9;
+            border-radius: 50%;
+        }
+
+        .footer-divider {
+            width: 1300px;
+            height: 0px;
+            border: 1px solid #959DA5;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 1290px;
+            height: 50px;
+        }
+
+        .footer-credit {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: #000000;
+        }
+
+        /* Decorative Elements */
+        .ellipse {
+            box-sizing: border-box;
+            position: absolute;
+            border: 1px solid #D9D9D9;
+            border-radius: 50%;
+        }
+
+        .ellipse-130 {
+            width: 354px;
+            height: 354px;
+            left: -98px;
+            top: 144px;
+        }
+
+        .ellipse-139 {
+            width: 122px;
+            height: 122px;
+            left: 138px;
+            top: 110px;
+        }
+
+        .ellipse-140 {
+            width: 109px;
+            height: 109px;
+            left: 1360px;
+            top: 649px;
+        }
+
+        .ellipse-136 {
+            width: 354px;
+            height: 354px;
+            left: 1151px;
+            top: 1166px;
+        }
+
+        .ellipse-137 {
+            width: 591px;
+            height: 591px;
+            left: -154px;
+            top: 2330px;
+        }
+
+        .ellipse-138 {
+            width: 409px;
+            height: 409px;
+            left: 1177px;
+            top: 3871px;
+        }
+
+        .orange-blur {
+            position: absolute;
+            background: #FFA500;
+            filter: blur(150px);
+            border-radius: 50%;
+        }
+
+        .orange-131 {
+            width: 260px;
+            height: 260px;
+            left: 1272px;
+            top: 349px;
+        }
+
+        .orange-132 {
+            width: 260px;
+            height: 260px;
+            left: -72px;
+            top: 1446px;
+            filter: blur(175px);
+        }
+
+        .orange-133 {
+            width: 224px;
+            height: 224px;
+            left: 1307px;
+            top: 2734px;
+        }
+
+        .orange-134 {
+            width: 299px;
+            height: 299px;
+            left: -127px;
+            top: 3880px;
+            filter: blur(175px);
+        }
+
+        .orange-135 {
+            width: 271px;
+            height: 271px;
+            left: 1257px;
+            top: 4806px;
+            filter: blur(200px);
+        }
+    
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="aboutindex.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="blogs.html">Articles</a>
+    <a href="contactus.html">Contact Us</a>
+</div>
+        <div class="logo">GG_Logo</div>
+        <div class="search-bar">
+            <span>Search</span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <h1 class="services-title">Services</h1>
+    <h2 class="services-subtitle">How do our Services help your Business?</h2>
+    <p class="intro-text">Running a small business or launching a startup is no small feat—and we get that. At GroGlobally, our job is to make sure your marketing works as hard as you do.</p>
+    <p class="intro-subtext">Here's how we help you grow smarter, faster, and stronger:</p>
+    <div class="orange-line"></div>
+
+    <!-- Service Points -->
+    <div class="service-point point1">
+        <div class="service-image" style="background-image: url('Services_1.jpg')"></div>
+        <div class="service-text">
+            <h3 class="service-title">Attract your Dream Customers:</h3>
+            <p class="service-description">Our targeted and customized strategies—SEO, Advertisments, and Content—help you reach people who are already looking for what you offer. No fluff, no random clicks. Just real leads and loyal customers.</p>
+        </div>
+    </div>
+
+    <div class="service-point point2">
+        <div class="service-image" style="background-image: url('Services_2.png')"></div>
+        <div class="service-text">
+            <h3 class="service-title">Make your Brand look like a Big Deal!</h3>
+            <p class="service-description">From scroll-stopping designs to standout social media, we help your business show up with confidence—so even if you're just starting out, you look established.</p>
+        </div>
+    </div>
+
+    <div class="service-point point3">
+        <div class="service-image" style="background-image: url('Services_3.jpg')"></div>
+        <div class="service-text">
+            <h3 class="service-title">Focus on What you Do Best:</h3>
+            <p class="service-description">We handle your marketing like a partner, not just a service. That means fewer DIY headaches and more time for you to focus on your product, your team, and your vision.</p>
+        </div>
+    </div>
+
+    <div class="service-point point4">
+        <div class="service-image" style="background-image: url('Services_4.jpg')"></div>
+        <div class="service-text">
+            <h3 class="service-title">Stretch your Budget (In a Good Way!)</h3>
+            <p class="service-description">Every rupee counts, and we treat it that way. Our services are built for high-impact and low-waste—so you get more reach, more engagement, and more value without overspending.</p>
+        </div>
+    </div>
+
+    <div class="service-point point5">
+        <div class="service-image" style="background-image: url('Services_5.jpg')"></div>
+        <div class="service-text">
+            <h3 class="service-title">See What's Working (and What Doesn't):</h3>
+            <p class="service-description">We give you clear insights, not confusing reports. Know exactly how your business is growing, and where to double down next.</p>
+        </div>
+    </div>
+
+    <!-- Page Breaker -->
+    <div class="page-breaker"></div>
+
+    <!-- Packages Section -->
+    <h3 class="packages-title">Our Creative Services</h3>
+    <h2 class="packages-subtitle">The Packages we Provide</h2>
+
+    <div class="packages-container">
+        <!-- Beginners Package -->
+        <div class="package package1">
+            <div class="package-bg"></div>
+            <div class="package-highlight"></div>
+            <h3 class="package-name">Beginners</h3>
+            <div class="package-features-left">
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Instagram + FB + YouTube + WhatsApp + LinkedIn + Pinterest
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    30 Day Content Calendar
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    14 Reels + Posts
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    95 Stories
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    1 Social Media Series
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Tailored Strategies for Social Media
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Dedicated Account Manager
+                </div>
+            </div>
+            <div class="package-features-right">
+                <p class="package-description">An Easy Solution for Beginners and Early Start-ups</p>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    SEO-optimized Hashtags and Captions
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Competitive Analysis Basic Ad Management
+                </div>
+                <div class="feature-item">
+                    <div class="cross-icon"></div>
+                    1 Hour of Community Management
+                </div>
+                <div class="feature-item">
+                    <div class="cross-icon"></div>
+                    2 Custom Graphics Design
+                </div>
+                <div class="feature-item">
+                    <div class="cross-icon"></div>
+                    Monthly Review + Strategy Calls
+                </div>
+                <div class="feature-item">
+                    <div class="cross-icon"></div>
+                    Enhanced Monthly Reporting
+                </div>
+            </div>
+        </div>
+
+        <!-- Semi-Pro Package -->
+        <div class="package package2">
+            <div class="package-bg"></div>
+            <div class="package-highlight"></div>
+            <h3 class="package-name">Semi-Pro</h3>
+            <div class="package-features-left">
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Instagram + FB + YouTube + WhatsApp + LinkedIn + Pinterest
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    30 Day Content Calendar
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    14 Reels + Posts
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    95 Stories
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    1 Social Media Series
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Tailored Strategies for Social Media
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Dedicated Account Manager
+                </div>
+            </div>
+            <div class="package-features-right">
+                <p class="package-description">Everything you need to Stand Out from the Crowd</p>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    SEO-optimized Hashtags and Captions
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Competitive Analysis Basic Ad Management
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    1 Hour of Community Management
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    2 Custom Graphics Design
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Monthly Review + Strategy Calls
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Enhanced Monthly Reporting
+                </div>
+            </div>
+        </div>
+
+        <!-- Pro Package -->
+        <div class="package package3">
+            <div class="package-bg"></div>
+            <div class="package-highlight"></div>
+            <h3 class="package-name">Pro</h3>
+            <div class="package-features-left">
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Instagram + FB + YouTube + WhatsApp + LinkedIn + Pinterest + X (Twitter)
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    30 Day Content Calendar
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    6 Posts + 18 Reels
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    2 Social Media Series
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Tailored Strategies for Social Media
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Dedicated Account Manager
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    SEO-optimized Hashtags and Captions
+                </div>
+            </div>
+            <div class="package-features-right">
+                <p class="package-description">Level-up with the Most Powerful and Enhanced Features</p>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Competitive Analysis with Advanced Insights
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Advanced Ad Management and Strategy
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    2 Hour of Community Management
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    4 Custom Graphics Design
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Bi-Weekly Review + Strategy Calls
+                </div>
+                <div class="feature-item">
+                    <div class="check-icon"></div>
+                    Detailed Monthly Reporting
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Button -->
+    <button class="cta-button" onclick="window.location.href='contactus.html'">Get Started</button>
+    <!-- Promise Section -->
+    <div class="promise-divider"></div>
+    <h2 class="promise-title">What's our Promise?</h2>
+
+    <div class="promise-container">
+        <div class="promise-item">
+            <div class="promise-icon"></div>
+            <h3 class="promise-item-title">On-Time Delivery</h3>
+        </div>
+        <div class="promise-item">
+            <div class="promise-icon"></div>
+            <h3 class="promise-item-title">Guaranteed Results</h3>
+        </div>
+        <div class="promise-item">
+            <div class="promise-icon"></div>
+            <h3 class="promise-item-title">24x7 Support</h3>
+        </div>
+    </div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-logo"></div>
+    <div class="footer-menu">
+      <a href="index.html" class="footer-menu-item">Home</a>
+      <a href="aboutindex.html" class="footer-menu-item">About Us</a>
+      <a href="service.html" class="footer-menu-item">Services</a>
+      <a href="blogs.html" class="footer-menu-item">Articles</a>
+      <a href="contactus.html" class="footer-menu-item">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="footer-middle">
+    <p class="footer-copyright">@GroGlobally All Rights Reserved</p>
+    <div class="footer-social">
+      <div class="social-icon"></div>
+      <div class="social-icon"></div>
+      <div class="social-icon"></div>
+      <div class="social-icon"></div>
+      <div class="social-icon"></div>
+    </div>
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    <p class="footer-credit">Designed and Developed by GroGlobally ❤</p>
+  </div>
+</footer>
+
+    <!-- Decorative Elements -->
+    <div class="ellipse ellipse-130"></div>
+    <div class="ellipse ellipse-139"></div>
+    <div class="ellipse ellipse-140"></div>
+    <div class="ellipse ellipse-136"></div>
+    <div class="ellipse ellipse-137"></div>
+    <div class="ellipse ellipse-138"></div>
+
+    <div class="orange-blur orange-131"></div>
+    <div class="orange-blur orange-132"></div>
+    <div class="orange-blur orange-133"></div>
+    <div class="orange-blur orange-134"></div>
+    <div class="orange-blur orange-135"></div>
+</body>
+</html>

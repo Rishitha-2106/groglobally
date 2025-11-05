@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Article - GroGlobally</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 80px;
+            gap: 150px;
+            width: 100%;
+            height: 70px;
+  background: #FFFACD; /* light yellow */
+            border: 1px solid #959DA5;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            width: 327px;
+            height: 54px;
+        }
+
+        .menu-item {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 23px;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .logo {
+            width: 165px;
+            height: 54px;
+            background: #ddd; /* Replace with actual logo image */
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 8px 32px;
+            width: 350px;
+            height: 40px;
+            background: #FFFFFF;
+            border: 1px solid #959DA5;
+            border-radius: 30px;
+        }
+
+        .search-input {
+            width: 100%;
+            height: 23px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 23px;
+            color: #000000;
+            border: none;
+            outline: none;
+        }
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            background: #000;
+        }
+
+        /* Article Content */
+   
+        .article-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 70px auto 0;
+  padding: 160px 0 60px; /* reduced bottom padding */
+  position: relative;
+}
+
+
+        .article-title {
+            width: 734px;
+            margin: 0 auto;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 39px;
+            line-height: 47px;
+            text-align: center;
+            color: #000000;
+        }
+
+        .article-subtitle {
+            width: 734px;
+            margin: 20px auto 0;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 31px;
+            line-height: 38px;
+            text-align: center;
+            color: #000000;
+        }
+
+
+
+        .section-title {
+            width: 616px;
+            margin: 80px 0 0 188px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+            color: #000000;
+        }
+
+        .content-paragraph {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            color: #000000;
+            margin-top: 30px;
+        }
+
+        .paragraph-body4 {
+            width: 1064px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        .paragraph-body5 {
+            width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 31px;
+            line-height: 38px;
+        }
+
+        .divider {
+            width: 100px;
+            height: 6px;
+            background: #FFA500;
+            margin: 40px 0 40px 188px;
+        }
+
+        /* Footer Styles */
+            .footer {
+      background: #FFF7E7;
+      border: 1px solid #959DA5;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 86px;
+    }
+    .footer-top, .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1290px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 30px;
+    }
+    .footer-links a {
+      font-size: 20px;
+      color: #000;
+      text-decoration: none;
+    }
+    .social-icons {
+      display: flex;
+      gap: 30px;
+    }
+    .social-icons img {
+      width: 48px;
+      height: 48px;
+    }
+    .social-icons a {
+  color: #FFA500; /* orange-yellow mix */
+  font-size: 28px; /* increase size */
+  margin: 0 12px; /* spacing between icons */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #FFB733; /* brighter orange-yellow on hover */
+  transform: scale(1.2); /* zoom effect on hover */
+}
+
+    .footer-line {
+      width: 1300px;
+      border-top: 1px solid #959DA5;
+    }
+    .footer-copy {
+      font-size: 20px;
+      color: #000;
+    }
+
+        .credits {
+            width: 408px;
+            height: 30px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+           .featured-image {
+            width: 100%;
+            max-width: 1064px;
+            height: 500px;
+            margin: 40px auto;
+            border-radius: 33px;
+            overflow: hidden;
+            background-color: #FFFFFF;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    /* Navbar container */
+.navbar {
+  background-color: white;
+  padding: 0 5%; /* proportional left & right space */
+}
+.navbar-content {
+  max-width: 1290px;  /* same as footer */
+  margin: 0 auto;     /* center horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;          /* space between nav items, logo, search */
+  padding: 20px 0;    /* vertical padding only */
+}
+
+
+.nav-menu {
+  display: flex;
+  gap: 1rem; /* proportional gap between nav items */
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.logo {
+  margin: 0 1rem; /* small space around logo */
+  flex-shrink: 0;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-container input {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+.ellipse {
+    position: absolute;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    z-index: -1; /* keep behind content */
+}
+
+.ellipse-130 {
+    width: 354px; height: 354px;
+    left: -98px; top: 144px;
+}
+.ellipse-139 {
+    width: 122px; height: 122px;
+    left: 138px; top: 110px;
+}
+.ellipse-140 {
+    width: 109px; height: 109px;
+    right: 50px; top: 650px;
+}
+.ellipse-136 {
+    width: 354px; height: 354px;
+    right: 50px; top: 1200px;
+}
+
+
+.orange-blur {
+    position: absolute;
+    background: #FFA500;
+    filter: blur(150px);
+    border-radius: 50%;
+    z-index: -2; /* behind ellipses */
+}
+
+.orange-131 { width: 260px; height: 260px; right: 80px; top: 350px; }
+.orange-132 { width: 260px; height: 260px; left: -72px; top: 1400px; filter: blur(175px); }
+.orange-133 { width: 224px; height: 224px; right: 80px; top: 2700px; }
+
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="aboutindex.html">About Us</a>
+        <a href="service.html">Services</a>
+        <a href="blogs.html">Articles</a>
+        <a href="contactus.html">Contact Us</a>
+    </div>
+
+        <img src="groglobally-logo.png" alt="Logo" style="width: 120px; height: auto;">
+
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Search">
+        <button class="search-btn">
+        </button>
+    </div>
+</nav>
+
+
+
+    <!-- Article Content -->
+    <div class="article-container">
+        <h1 class="article-title">Digital Marketing</h1>
+        <h2 class="article-subtitle">Starting and growing a career in digital marketing</h2>
+        <div class="featured-image">
+    <img src="Digital_Marketing.jpg" alt="Featured Image">
+</div>
+
+
+
+        <h3 class="section-title" id="introduction-title">Introduction</h3>
+        <p class="content-paragraph paragraph-body4" id="paragraph1">
+            Digital marketing is a marketing strategy that a company needs for the current era. A company needs a marketer with up-to-date knowledge about digital marketing works and their application, such as on a website, email, mobile, and interactive TV One of the factors that have accelerated the change in strategic marketing to digital marketing strategy is the covid- 19 pandemic, where Indonesians are encouraged to stay at home until the covid-19 pandemic ends, as well as government policies related to the pandemic, namely keeping your distance, and no crowding, which causes offline sales moved to online sales. This statement is supported by data from in 2020 Q2, which states that internet users in Indonesia are 196.71 million of the total Indonesian population of 266.91 million, or as many as 73.7% of Indonesians already use the internet in their daily lives.
+        </p>
+        
+        <div class="divider" id="divider1"></div>
+        
+        <p class="content-paragraph paragraph-body5" id="paragraph2">
+            Internet users in Indonesia increased by 8.9% or 25,537,353.5 people. which states that digital advertising spending in Indonesia through classifieds such as video advertising, social media advertising, banner advertising, search advertising increased in 2020 due to the impact of Covid-19, it is predicted to increase by around IDR 21 billion or increase 15.15% year on year compared to March 2019 which reached IDR 18 billion.
+        </p>
+        
+        <h3 class="section-title" id="what-we-mean-title">What Do We Mean:</h3>
+        <p class="content-paragraph paragraph-body4" id="paragraph3">
+            Businesses that use digital marketing are not the only business to consumers but also business to business. For business-to-business data, it is supported by open rate data for email marketing in Indonesia shows that the b2b company industry has the most significant percentage of average open rate marketing email in Indonesia, which is 38.56%. Next is data regarding a company's click-through rate (CTR), which is data on the percentage of people who click on a link in an email; this is one way to determine whether consumers are interested and see the document sent or not.
+        </p>
+        
+        <div class="divider" id="divider2"></div>
+        
+        <p class="content-paragraph paragraph-body5" id="paragraph4">
+            The business-to- business company industry is the second most significant percentage with 7,65% From these two data, it indicates that digital marketing (via email marketing) is a step that shows the Indonesian people have started to show an interest in the digital marketing world, but the effectiveness still needs to be done more in-depth research.
+        </p>
+        
+        <h3 class="section-title" id="conclusion-title">The Conclusion</h3>
+        <p class="content-paragraph paragraph-body4" id="paragraph5">
+            This increasing use of the internet occurs in all lines of business, from small-scale to large-scale, businesses. This massive shifting in Indonesia has a significat impact on the economy, especially for businesses that are less able to adapt to change will slowly be displaced and will go bankrupt in this pandemic. A business or company must change to the digital world, turning all-access, which was initially in the form of offline services or products, into online services or products. To compete in this digital world, according to what have said, a business needs marketers who can adapt, one of which is by changing to digital marketing.
+        </p>
+        
+        <div class="divider" id="divider3"></div>
+        
+        <p class="content-paragraph paragraph-body5" id="paragraph6">
+            All lines of business (both in products and services) require digital marketing, including the object that the authors chose, a business that uses a business-to-business system, namely Ailesh Green Consulting, a consulting service for environmental impact control and improvement.
+        </p>
+    </div>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-top">
+      <img src="groglobally-logo.png" alt="Footer Logo" style="height:67px">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+    <a href="aboutindex.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="blogs.html">Articles</a>
+    <a href="contactus.html">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-top">
+      <div class="footer-copy">@GroGlobally &nbsp; All Rights Reserved</div>
+      <div class="social-icons">
+    
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          
+      </div>
+    </div>
+    <div class="footer-line"></div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Designed and Developed by GroGlobally ❤️</div>
+    </div>
+  </footer>
+  <div class="ellipse ellipse-130"></div>
+<div class="ellipse ellipse-139"></div>
+<div class="ellipse ellipse-140"></div>
+<div class="ellipse ellipse-136"></div>
+<div class="ellipse ellipse-137"></div>
+<div class="ellipse ellipse-138"></div>
+
+<div class="orange-blur orange-131"></div>
+<div class="orange-blur orange-132"></div>
+<div class="orange-blur orange-133"></div>
+<div class="orange-blur orange-134"></div>
+<div class="orange-blur orange-135"></div>
+</body>
+</html>

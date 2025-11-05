@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Computing | GroGlobally</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #FFFFFF;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 80px;
+            width: 100%;
+            height: 70px;
+            background: #FFF7E7;
+            border: 1px solid #959DA5;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 16px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 13px;
+            line-height: 23px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 8px 32px;
+            width: 350px;
+            height: 40px;
+            background: #FFFFFF;
+            border: 1px solid #959DA5;
+            border-radius: 30px;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 13px;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-bottom: 59px; /* Space for footer */
+        }
+
+        .article-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .article-header h1 {
+            font-weight: 700;
+            font-size: 39px;
+            line-height: 47px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .article-header h2 {
+            font-weight: 400;
+            font-size: 31px;
+            line-height: 38px;
+            color: #000000;
+        }
+
+        .featured-image {
+            width: 100%;
+            max-width: 1064px;
+            height: 500px;
+            margin: 40px auto;
+            border-radius: 33px;
+            overflow: hidden;
+            background-color: #FFFFFF;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-section {
+            max-width: 1064px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .article-section h3 {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+            color: #000000;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+
+        }
+
+
+        .article-section p {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+
+        /* Footer Styles */
+            .footer {
+      background: #FFF7E7;
+      border: 1px solid #959DA5;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 86px;
+    }
+    .footer-top, .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1290px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 30px;
+    }
+    .footer-links a {
+      font-size: 20px;
+      color: #000;
+      text-decoration: none;
+    }
+    .social-icons {
+      display: flex;
+      gap: 30px;
+    }
+    .social-icons img {
+      width: 48px;
+      height: 48px;
+    }
+    .social-icons a {
+  color: #FFA500; /* orange-yellow mix */
+  font-size: 28px; /* increase size */
+  margin: 0 12px; /* spacing between icons */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #FFB733; /* brighter orange-yellow on hover */
+  transform: scale(1.2); /* zoom effect on hover */
+}
+
+    .footer-line {
+      width: 1300px;
+      border-top: 1px solid #959DA5;
+    }
+    .footer-copy {
+      font-size: 20px;
+      color: #000;
+    }
+
+        .credits {
+            font-size: 20px;
+            line-height: 30px;
+        }
+.styled-heading {
+  font-weight: normal;            /* removes default bold */
+  line-height: 1.5;
+  border-left: 4px solid orange;
+  padding-left: 10px;
+  margin: 20px 0;
+  font-size: 1.1rem;
+  font-family: Arial, Helvetica, sans-serif; /* normal clean font */
+}
+.ellipse {
+    position: absolute;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    z-index: -1; /* keep behind content */
+}
+
+.ellipse-130 {
+    width: 354px; height: 354px;
+    left: -98px; top: 144px;
+}
+.ellipse-139 {
+    width: 122px; height: 122px;
+    left: 138px; top: 110px;
+}
+.ellipse-140 {
+    width: 109px; height: 109px;
+    right: 50px; top: 650px;
+}
+.ellipse-136 {
+    width: 354px; height: 354px;
+    right: 50px; top: 1200px;
+}
+
+
+.orange-blur {
+    position: absolute;
+    background: #FFA500;
+    filter: blur(150px);
+    border-radius: 50%;
+    z-index: -2; /* behind ellipses */
+}
+
+.orange-131 { width: 260px; height: 260px; right: 80px; top: 350px; }
+.orange-132 { width: 260px; height: 260px; left: -72px; top: 1400px; filter: blur(175px); }
+.orange-133 { width: 224px; height: 224px; right: 80px; top: 2700px; }
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="aboutindex.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="blogs.html">Articles</a>
+    <a href="contactus.html">Contact Us</a>
+</div>
+        <div class="logo">
+            <img src="groglobally-logo.png" alt="Description"style="width: 120px; height: auto;" />
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="article-header">
+            <h1>Quantum Computing</h1>
+            <h2>What to Expect in Quantum Computing</h2>
+        </div>
+
+        <div class="featured-image">
+            <img src="Quantum_Computing.png" alt="Quantum Computing">
+        </div>
+
+        <div class="article-section">
+            <h1>Introduction</h1><br>
+            <p>Imagine a world where computers can solve problems in seconds that would take today's most advanced systems thousands of years. This isn't science fiction—it's the promise of quantum computing. When combined with artificial intelligence (AI), the possibilities become even more astonishing, with the potential to revolutionize industries ranging from healthcare to finance.
+            Quantum computing differs from traditional computing by using quantum bits, or qubits, instead of classical bits. While classical bits can be either 0 or 1, qubits can exist in both states simultaneously, thanks to a principle called superposition. This allows quantum computers to process vast amounts of information simultaneously, exponentially increasing their processing power.Additionally, the concept of entanglement enables qubits to be interconnected, so the state of one can depend on another, no matter the distance. This unique capability allows quantum computers to perform calculations that are impossible for classical computers.</p>
+            <br><h3 class="styled-heading">Additionally, the concept of entanglement enables qubits to be interconnected, so the state of one can depend on another, no matter the distance. This unique capability allows quantum computers to perform calculations that are impossible for classical computers.</h3>
+        </div>
+
+        <div class="article-section">
+            <h1>What Do We Mean:</h1><br>
+            <p>AI, on the other hand, refers to the ability of machines to perform tasks that usually require human intelligence, such as learning, reasoning, and problem-solving. AI is already integrated into our daily lives through virtual assistants, recommendation algorithms, and more. However, the combination of AI with quantum computing could take these applications to new heights by dramatically enhancing the speed and accuracy of data processing.The intersection of quantum computing and AI offers several advantages. For instance, quantum computing can significantly accelerate the training of AI models, which typically requires processing large datasets. Tasks that currently take days or weeks on classical computers could be completed in hours or minutes, enabling AI to learn and improve at unprecedented speeds.Moreover, quantum computers could tackle complex problems, like simulating molecular structures for drug discovery, that are currently beyond the reach of classical computers. This synergy could lead to breakthroughs in personalized medicine, climate modeling, and more. However, the integration of quantum computing and AI is not without challenges.</p>
+           <br> <h3 class="styled-heading" >Quantum computers are still in their infancy, with significant hurdles such as hardware limitations, high error rates, and the complexity of developing stable qubits. Moreover, the integration of quantum and classical systems poses additional challenges, requiring new approaches and collaborative efforts from researchers, industry, and governments.</h3>
+        </div>
+
+        <div class="article-section">
+            <h1>The Conclusion</h1><br>
+            <p>Despite these challenges, the future of quantum computing and AI is incredibly promising. As these technologies continue to evolve, they are expected to bring transformative changes across various sectors. With ongoing investments, collaborative efforts, and advancements in quantum algorithms, we can anticipate breakthroughs in drug discovery, climate modeling, financial risk analysis, and personalized healthcare within the next decade.</p>
+<br><h3 class="styled-heading">
+  The combination of quantum computing and AI will likely redefine the boundaries of what technology can achieve, shaping the future in ways we are only beginning to imagine.
+</h3>
+        </div>
+    </div>
+
+    <!-- Footer -->
+        <!-- Footer -->
+<footer class="footer">
+    <div class="footer-top">
+      <img src="groglobally-logo.png" alt="Footer Logo" style="height:67px">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+    <a href="aboutindex.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="blogs.html">Articles</a>
+    <a href="contactus.html">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-top">
+      <div class="footer-copy">@GroGlobally &nbsp; All Rights Reserved</div>
+      <div class="social-icons">
+    
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          
+      </div>
+    </div>
+    <div class="footer-line"></div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Designed and Developed by GroGlobally ❤️</div>
+    </div>
+  </footer>
+  <div class="ellipse ellipse-130"></div>
+<div class="ellipse ellipse-139"></div>
+<div class="ellipse ellipse-140"></div>
+<div class="ellipse ellipse-136"></div>
+<div class="ellipse ellipse-137"></div>
+<div class="ellipse ellipse-138"></div>
+
+<div class="orange-blur orange-131"></div>
+<div class="orange-blur orange-132"></div>
+<div class="orange-blur orange-133"></div>
+<div class="orange-blur orange-134"></div>
+<div class="orange-blur orange-135"></div>
+</body>
+</html>
