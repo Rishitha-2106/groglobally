@@ -23,4 +23,4 @@ The website is built using **pure HTML, CSS, and JavaScript**, focusing on a cle
 
 ---
 
-(screenshots/image.png)
+![Screenshot](screenshots/image.png)
