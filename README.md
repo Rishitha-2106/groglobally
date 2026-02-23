@@ -24,3 +24,9 @@ The website is built using **pure HTML, CSS, and JavaScript**, focusing on a cle
 ---
 
 ![Screenshot](screenshots/image.png)
+![Screenshot](screenshots/image1.png)
+![Screenshot](screenshots/image2.png)
+![Screenshot](screenshots/image3.png)
+![Screenshot](screenshots/image4.png)
+![Screenshot](screenshots/image5.png)
+![Screenshot](screenshots/image6.png)
