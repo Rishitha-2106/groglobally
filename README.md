@@ -22,3 +22,5 @@ The website is built using **pure HTML, CSS, and JavaScript**, focusing on a cle
 - Lightweight and fast-loading design  
 
 ---
+
+(screenshots/image.png)
